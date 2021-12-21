@@ -5,8 +5,11 @@ def parse_input(input_string):
     # rstrip prevents empty lines at the end of the input from being mixed up with the input
     input_string = input_string.rstrip("\n").split("\n")
     number_order = [int(i) for i in input_string[0].split(",")]
-    bingo_length = len(input_string[2].split())        
+    bingo_length = len(input_string[2].split())
+    # bingo_field_amount determines how many bingo boards there are        
     bingo_field_amount = int((len(input_string)-1)/(bingo_length+1))
+    
+    #group all bingo boards together 
     bingo_fields = []
     for i in range(bingo_field_amount):
     	cur_field = []
