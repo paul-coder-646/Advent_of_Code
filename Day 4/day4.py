@@ -1,7 +1,10 @@
+import sys
+
 # This Day I needed some inspiration from Roman, a friend of mine, 
 # who is also doing AoC this year (Github: @romern), so this code is NOT really mine :D
 
 def parse_input(input_string):
+    
     # rstrip prevents empty lines at the end of the input from being mixed up with the input
     input_string = input_string.rstrip("\n").split("\n")
     number_order = [int(i) for i in input_string[0].split(",")]
@@ -29,12 +32,13 @@ def sum_all_unmarked(bingo_field, drawn_numbers):
 # Checks if a bingo field is winning, and returns its score
 def check_bingo_field(bingo_field, drawn_numbers):
 	for i in range(len(bingo_field)):
-		l = bingo_field[i]
+		row = bingo_field[i]
 		col = [b[i] for b in bingo_field]
 		winner_row = True
 		winner_col = True
+  
 		for j in range(len(bingo_field)):
-			if l[j] not in drawn_numbers:
+			if row[j] not in drawn_numbers:
 				winner_row = False
 			if col[j] not in drawn_numbers:
 				winner_col = False
@@ -71,10 +75,6 @@ def part2(number_order, bingo_fields):
 
 
 if __name__ == "__main__":
-    import sys
-    #if len(sys.argv)<2:
-	#    print("Gib data")
-	#    exit()
     number_order, bingo_fields = parse_input(open('/Users/waverider/Desktop/Programming/Advent of Code/Day 4/input').read()) 
     print(part1(number_order,bingo_fields))
     print(part2(number_order,bingo_fields))
