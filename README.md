@@ -1,6 +1,6 @@
 # Advent_of_Code
 My first attempt at the annual Advent of Code Challenge\
-(Credits to Eric Wastl | [github](https://github.com/topaz) :snowman:
+(Credits to Eric Wastl | [github](https://github.com/topaz) :snowman:)
 ---
 
 Some days, I was smart, some days I just wanted to get sh** done :D so...\
